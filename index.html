@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LIFT MVP | Empowering Lives</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffffff, #666);
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #2563eb;
+    }
+
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #4b5563;
+      margin-top: 10px;
+    }
+
+    .features {
+      padding: 50px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1e40af;
+    }
+
+    .footer {
+      background: #f3f4f6;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    header {
+      background: #ffffff;
+      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #2563eb;
+    }
+
+    .hero {
+      padding: 80px 20px 40px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+
+    .content {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 1.75rem;
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    .footer {
+      background: #f3f4f6;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #2563eb;
+    }
+
+    .hero {
+      padding: 80px 20px 40px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #047857;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+      animation: fadeIn 1s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #16a34a;
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #1e40af;
+    }
+
+    .feature-text {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    .footer {
+      background: #f3f4f6;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ca8a04;
+    }
+
+    .hero {
+      padding: 60px 20px 30px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .contact-box {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-box input:focus,
+    .contact-box textarea:focus {
+      border-color: #f59e0b;
+      outline: none;
+    }
+
+    .contact-box button {
+      background: #f59e0b;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-box button:hover {
+      background: #d97706;
+    }
+
+    .footer {
+      background: #f3f4f6;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to LIFT MVP</h1>
+      <p>📡 Bridging Skills & Opportunities — Even Without Internet</p>
+    </div>
+  </section>
+
+  <!-- Features / Highlights -->
+  <section class="container features">
+    <div class="card">
+      <h3>📱 SMS/WhatsApp Based Access</h3>
+      <p>No smartphone? No problem! Users can apply, learn & earn via basic mobile phone.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎓 Skill-to-Opportunity Matching</h3>
+      <p>AI-driven matching between registered users and nearby job/NGO opportunities.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌐 NGO & Government Integration</h3>
+      <p>Designed for collaboration with global NGOs, governments & social investors.</p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Donations & Withdrawals</h3>
+      <p>Locally supported payment systems like JazzCash, bKash, M-Pesa and more.</p>
+    </div>
+
+    <div class="card">
+      <h3>📈 Transparent Impact Tracking</h3>
+      <p>Live dashboard to visualize user growth, donations, and successful matches.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Built for the Marginalized</h3>
+      <p>Empowering people in villages, slums, refugee camps & disconnected areas.</p>
+    </div>
+  </section>
+
+    <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>🌍 Our Mission</h1>
+    </div>
+  </section>
+
+  <!-- Mission Content -->
+  <div class="container content">
+
+    <div class="section">
+      <h2>Mission</h2>
+      <p>
+        To empower underserved and disconnected communities by connecting their local talents and skills to global opportunities, using accessible and low-tech solutions like SMS and WhatsApp. We aim to break the digital barrier and promote sustainable development, one community at a time.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Vision</h2>
+      <p>
+        A world where every individual, regardless of internet access or socioeconomic status, has the chance to earn, learn, and grow. We envision LIFT as the bridge between marginalized talent and life-changing opportunities, NGOs, donors, and education providers.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Core Values</h2>
+      <p>
+        💙 Inclusivity & Equity — We design for the lowest-resourced communities.<br>
+        📶 Accessibility — Our solutions work without internet or smartphones.<br>
+        🤝 Partnership — We collaborate with NGOs, donors, and governments.<br>
+        🚀 Impact — Every decision is driven by measurable social change.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>⚙️ Core Features</h1>
+      <p class="text-lg text-gray-600 mt-2">Smart, simple, and designed for the disconnected</p>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <div class="container feature-grid">
+
+    <div class="feature-box">
+      <div class="feature-icon">📱</div>
+      <div class="feature-title">SMS & WhatsApp Access</div>
+      <div class="feature-text">Users without internet or smartphones can register, receive jobs, and communicate using only SMS or WhatsApp.</div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon">🎯</div>
+      <div class="feature-title">AI-Powered Matching</div>
+      <div class="feature-text">Our intelligent matcher connects users to the most relevant NGOs, job opportunities, or training based on their skills and location.</div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon">💸</div>
+      <div class="feature-title">Donation Management</div>
+      <div class="feature-text">Accept and track donations via Stripe or local methods. Donors receive transparency through dashboards and automated receipts.</div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon">📊</div>
+      <div class="feature-title">Real-Time Dashboard</div>
+      <div class="feature-text">Admins can monitor user registrations, donations, NGOs, and matches with live updates and graphs.</div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon">🏆</div>
+      <div class="feature-title">Certificates & Skills</div>
+      <div class="feature-text">Users can receive certificates for completed tasks, training programs, or NGO projects — even without an email.</div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon">🌐</div>
+      <div class="feature-title">Offline Friendly</div>
+      <div class="feature-text">Designed for people with limited access — low bandwidth, low memory devices, and no app installations needed.</div>
+    </div>
+
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>📬 Get in Touch</h1>
+      <p class="text-gray-700 mt-2">We're here to help and hear from you</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <h3>Connect with Us</h3>
+    <ul class="contact-list">
+        <li><strong>Email:</strong> zubairabdullah415@gmail.com</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/zubairabdullah98" target="_blank">github.com/your-username</a></li>
+        <li><strong>Location:</strong> Available where help is needed 🌍</li>
+    </ul>
+
+    <hr style="margin: 30px 0;">
+</section>
+
+  <!-- Contact Form -->
+  <div class="container">
+    <div class="contact-box">
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Mission | LIFT MVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 LIFT MVP — Created with ❤️ by Zubair Abdullah. Empowering Lives, Connecting Skills.
+  </footer>
+
+</html>
+
