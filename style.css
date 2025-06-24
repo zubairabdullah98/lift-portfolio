@@ -6,6 +6,32 @@ body {
     color: #333;
 }
 
+
+.svg-background {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.svg-background img {
+  width: 500px;
+  height: 500px;
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 header {
     background: #1e3a8a;
     color: white;
